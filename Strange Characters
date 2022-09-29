@@ -1,0 +1,26 @@
+//2번 이상한 문자 만들기2
+public class test2 {
+    public String solution(String s) {
+        String[] array = s.split("");
+        String answer = "";
+        int cnt = -1;
+
+        for(String ss : array) {
+            if(!ss.contains(" ")){
+                cnt ++;
+            }
+            if(cnt%2 == 0){
+                answer += ss.toUpperCase();
+            }else{
+                answer += ss.toLowerCase();
+            }
+        }
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        test2 method = new test2();
+        String s = "hang hae ninety nine";
+        System.out.println(method.solution(s));
+    }
+}
